@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Records</h1>
+<p>These are records that have been saved to the database.</p>
+
+
+<table>
+    <thead>
+    <td>ID</td>
+    <td>Temperature</td>
+    <td>Pressure</td>
+    <td>Time</td>
+    </thead>
+
+{% for id, time, temperature, pressure in records %}
+    <tr>
+        <td>{{ id }}</td>
+        <td>{{ temperature }}</td>
+        <td>{{ pressure }}</td>
+        <td>{{ time }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
